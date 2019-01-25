@@ -1,4 +1,4 @@
-package br.com.peixotoinstalacoes.model;
+package br.com.peixotoinstalacoes.sistema.model;
 
 public class Endereco {
 
