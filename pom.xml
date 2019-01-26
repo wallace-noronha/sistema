@@ -70,6 +70,48 @@
             <artifactId>spring-integration-mail</artifactId>
             <version>${spring-integration}</version>
         </dependency>
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+    		<version>4.0.1</version>
+    		<scope>provided</scope>
+		</dependency>
+		<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+		<dependency>
+    		<groupId>org.hibernate</groupId>
+    		<artifactId>hibernate-core</artifactId>
+    		<version>5.4.1.Final</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.hibernate.validator</groupId>
+    		<artifactId>hibernate-validator</artifactId>
+    		<version>6.1.0.Alpha2</version>
+		</dependency>
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+		<dependency>
+    		<groupId>commons-dbcp</groupId>
+    		<artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+		<dependency>
+    		<groupId>org.junit.jupiter</groupId>
+    		<artifactId>junit-jupiter-api</artifactId>
+    		<version>5.3.1</version>
+    		<scope>test</scope>
+		</dependency>
 
 	</dependencies>
   
@@ -91,7 +133,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.0.v20161208</version>
+                <version>9.4.14.v20181114</version>
                 <configuration>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
                 </configuration>

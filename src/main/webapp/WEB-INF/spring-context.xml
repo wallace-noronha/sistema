@@ -15,9 +15,9 @@
 	   					http://www.springframework.org/schema/data/jpa
 						http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<jpa:repositories base-package="br.com.peixotoinstalacoes" />
+	<jpa:repositories base-package="br.com.peixotoinstalacoes.sistema" />
 
-	<context:component-scan base-package="br.com.peixotoinstalacoes" />
+	<context:component-scan base-package="br.com.peixotoinstalacoes.sistema" />
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler/>
 
@@ -28,8 +28,8 @@
 
 	<bean id="mysqlDS" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="username" value="root"/>
-		<property name="password" value="S123info"/>
-		<property name="url" value="jdbc:mysql://localhost/ingresso?createDatabaseIfNotExist=true"/>
+		<property name="password" value="root"/>
+		<property name="url" value="jdbc:mysql://localhost/sistema?createDatabaseIfNotExist=true"/>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 	</bean>
 	
