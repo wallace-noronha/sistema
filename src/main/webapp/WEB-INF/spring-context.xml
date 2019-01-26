@@ -27,9 +27,9 @@
 	</bean>
 
 	<bean id="mysqlDS" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="username" value="root"/>
-		<property name="password" value="root"/>
-		<property name="url" value="jdbc:mysql://localhost/sistema?createDatabaseIfNotExist=true"/>
+		<property name="username" value="bed55c394a7fef"/>
+		<property name="password" value="475579b2"/>
+		<property name="url" value="jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/sistema?createDatabaseIfNotExist=true"/>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 	</bean>
 	

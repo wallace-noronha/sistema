@@ -10,7 +10,6 @@ public class HomeController {
 	    @GetMapping("/")
 	    public ModelAndView home(){
 	        ModelAndView mav = new ModelAndView("home");
-	   	
 	    	return mav;
 	    }
 }
