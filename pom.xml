@@ -23,103 +23,134 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring-version>5.1.3.RELEASE</spring-version>
-        <spring-integration>5.1.2.RELEASE</spring-integration>
-        <spring-data>2.1.4.RELEASE</spring-data>
     </properties>
   
 <!-- Dependencias do projeto -->
 	<dependencies>
-  		<dependency>
+<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-             <version>${spring-version}</version>
+            <version>4.3.5.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-             <version>${spring-version}</version>
+            <version>4.3.5.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${spring-version}</version>
+            <version>4.3.5.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>${spring-version}</version>
+            <version>4.2.1.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>${spring-version}</version>
+            <version>4.2.1.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-taglibs</artifactId>
-            <version>${spring-version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>${spring-data}</version>
+            <version>1.10.6.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-mail</artifactId>
-            <version>${spring-integration}</version>
+            <version>4.3.5.RELEASE</version>
         </dependency>
-		<dependency>
-    		<groupId>javax.servlet</groupId>
-		    <artifactId>javax.servlet-api</artifactId>
-    		<version>4.0.1</version>
-    		<scope>provided</scope>
-		</dependency>
-		<dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>4.2.1.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-		<dependency>
-    		<groupId>org.hibernate</groupId>
-    		<artifactId>hibernate-core</artifactId>
-    		<version>5.4.1.Final</version>
-		</dependency>
-		<dependency>
-    		<groupId>org.hibernate.validator</groupId>
-    		<artifactId>hibernate-validator</artifactId>
-    		<version>6.1.0.Alpha2</version>
-		</dependency>
-		<dependency>
+             
+         <dependency>
+             <groupId>javax.servlet.jsp</groupId>
+             <artifactId>javax.servlet.jsp-api</artifactId>
+             <version>2.3.1</version>
+         </dependency>             
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.5.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.2.4.Final</version>
+        </dependency>
+
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
         </dependency>
-		<dependency>
-    		<groupId>commons-dbcp</groupId>
-    		<artifactId>commons-dbcp</artifactId>
-		    <version>1.4</version>
-		</dependency>
-		<dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.5.6</version>
         </dependency>
+
 		<dependency>
-    		<groupId>org.junit.jupiter</groupId>
-    		<artifactId>junit-jupiter-api</artifactId>
-    		<version>5.3.1</version>
-    		<scope>test</scope>
+
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.javaconfig</groupId>
+			<artifactId>spring-javaconfig</artifactId>
+			<version>1.0.0.m3</version>
 		</dependency>
 
 	</dependencies>
   
 <!-- Configurações de Build do projeto -->
-	<build>
-        <finalName>sistema</finalName>
+		<build>
+        	<finalName>sistema</finalName>
         <plugins>
-            <plugin>
+			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.1</version>
@@ -129,10 +160,14 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
+
 			<plugin>
-        		<groupId>com.heroku.sdk</groupId>
+				<groupId>com.heroku.sdk</groupId>
         		<artifactId>heroku-maven-plugin</artifactId>
         		<version>2.0.6</version>
+        		<configuration>
+        			<appName>peixoto-instalacoes</appName>
+        		</configuration>
       		</plugin>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
